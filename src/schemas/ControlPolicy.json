@@ -12,7 +12,12 @@
         "category": {
           "description": "The category of policy.",
           "type": "string",
-          "enum": ["compliance", "config", "password", "other"]
+          "examples": [
+            "compliance",
+            "config",
+            "password",
+            "other"
+          ]
         },
         "rules": {
           "description": "Rules of policy.",

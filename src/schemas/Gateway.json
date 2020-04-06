@@ -4,7 +4,9 @@
   "description": "A gateway/proxy that can be a system/appliance or software service, such as a network router or application gateway.",
   "type": "object",
   "allOf": [
-    { "$ref": "#Entity" },
+    {
+      "$ref": "#Entity"
+    },
     {
       "properties": {
         "category": {
@@ -12,7 +14,12 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["network", "application", "data", "other"]
+            "examples": [
+              "network",
+              "application",
+              "data",
+              "other"
+            ]
           }
         },
         "function": {
@@ -20,7 +27,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": [
+            "examples": [
               "routing",
               "nat",
               "api-gateway",
@@ -45,7 +52,11 @@
           "type": "boolean"
         }
       },
-      "required": ["category", "function", "public"]
+      "required": [
+        "category",
+        "function",
+        "public"
+      ]
     }
   ]
 }

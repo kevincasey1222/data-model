@@ -1,9 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#Entity",
+  "description": "A node in the graph database that represents an Entity. This reference schema defines common shared properties among most Entities.",
   "type": "object",
   "allOf": [
-    { "$ref": "#GraphObject" },
+    {
+      "$ref": "#GraphObject"
+    },
     {
       "properties": {
         "name": {
@@ -24,8 +27,13 @@
         },
         "classification": {
           "description": "The sensitivity of the data; should match company data classification scheme",
-          "type": ["string", "null"],
-          "examples": ["critical", "confidential", "internal", "public"]
+          "type": "string",
+          "examples": [
+            "critical",
+            "confidential",
+            "internal",
+            "public"
+          ]
         },
         "criticality": {
           "description": "A number that represents the value or criticality of this entity, on a scale between 1-10.",
@@ -126,7 +134,10 @@
           }
         }
       },
-      "required": ["name", "displayName"]
+      "required": [
+        "name",
+        "displayName"
+      ]
     }
   ]
 }

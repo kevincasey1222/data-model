@@ -4,7 +4,9 @@
   "description": "A database cluster/instance.",
   "type": "object",
   "allOf": [
-    { "$ref": "#Entity" },
+    {
+      "$ref": "#Entity"
+    },
     {
       "properties": {
         "location": {
@@ -17,10 +19,22 @@
         },
         "encrypted": {
           "description": "If the repository is encrypted",
-          "type": ["boolean", "null"]
+          "type": "boolean"
+        },
+        "classification": {
+          "description": "The sensitivity of the data; should match company data classification scheme",
+          "type": "string",
+          "examples": [
+            "critical",
+            "confidential",
+            "internal",
+            "public"
+          ]
         }
       },
-      "required": []
+      "required": [
+        "classification"
+      ]
     }
   ]
 }

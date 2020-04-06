@@ -4,7 +4,9 @@
   "description": "A defined, generic group of Entities. This could represent a group of Resources, Users, Workloads, DataRepositories, etc.",
   "type": "object",
   "allOf": [
-    { "$ref": "#Entity" },
+    {
+      "$ref": "#Entity"
+    },
     {
       "properties": {},
       "required": []

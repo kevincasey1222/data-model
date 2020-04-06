@@ -27,7 +27,7 @@
         },
         "encrypted": {
           "description": "If the data store is encrypted",
-          "type": ["boolean", "null"]
+          "type": "boolean"
         },
         "public": {
           "description": "Indicates if the data store is open to public access",
@@ -38,7 +38,9 @@
           "type": "boolean"
         }
       },
-      "required": ["classification", "encrypted"]
+      "required": [
+        "classification"
+      ]
     }
   ]
 }

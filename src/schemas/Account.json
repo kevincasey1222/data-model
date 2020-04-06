@@ -9,6 +9,11 @@
     },
     {
       "properties": {
+        "production": {
+          "description": "Indicates if this is a production account, defaults to false.",
+          "type": "boolean",
+          "default": false
+        },
         "accessURL": {
           "description": "The main URL to access this account, e.g. https://lifeomic.okta.com",
           "type": "string",
@@ -19,7 +24,9 @@
           "type": "boolean"
         }
       },
-      "required": []
+      "required": [
+        "production"
+      ]
     }
   ]
 }

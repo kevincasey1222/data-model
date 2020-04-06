@@ -4,7 +4,9 @@
   "description": "A compute instance that itself owns a whole network stack and serves as an environment for workloads. Typically it runs an operating system. The exact host type is described in the _type property of the Entity. The UUID of the host should be captured in the _id property of the Entity",
   "type": "object",
   "allOf": [
-    { "$ref": "#Entity" },
+    {
+      "$ref": "#Entity"
+    },
     {
       "properties": {
         "fqdn": {
@@ -63,7 +65,7 @@
         "platform": {
           "description": "Operating System Platform",
           "type": "string",
-          "enum": [
+          "examples": [
             "darwin",
             "linux",
             "unix",
@@ -98,7 +100,9 @@
           "type": "boolean"
         }
       },
-      "required": ["hostname"]
+      "required": [
+        "hostname"
+      ]
     }
   ]
 }

@@ -4,13 +4,21 @@
   "description": "A physical device or media, such as a server, laptop, workstation, smartphone, tablet, router, firewall, switch, wifi-access-point, usb-drive, etc. The exact data type is described in the _type property of the Entity.",
   "type": "object",
   "allOf": [
-    { "$ref": "#Entity" },
+    {
+      "$ref": "#Entity"
+    },
     {
       "properties": {
         "category": {
           "description": "The device category",
           "type": "string",
-          "examples": ["server", "endpoint", "storage-media", "mobile", "other"]
+          "examples": [
+            "server",
+            "endpoint",
+            "storage-media",
+            "mobile",
+            "other"
+          ]
         },
         "hardwareVendor": {
           "description": "The manufacturer or vendor of the device, e.g. Apple Inc., Generic",
@@ -35,7 +43,7 @@
         "platform": {
           "description": "Operating System Platform",
           "type": "string",
-          "enum": [
+          "examples": [
             "darwin",
             "linux",
             "unix",
@@ -125,7 +133,7 @@
         "status": {
           "description": "Status label of this device",
           "type": "string",
-          "enum": [
+          "examples": [
             "assigned",
             "archived",
             "decommissioned",
